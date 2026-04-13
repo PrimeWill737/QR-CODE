@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background-image: url("/img/5f9c9cfc740569d1a4ca3543.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 90%;
+  max-width: 520px;
+  margin: 60px auto 0;
+  padding: 40px 35px;
+  border-radius: 20px;
+  color: #000;
+  text-align: center;
+  background-color: #fff;
+  filter: drop-shadow(0 0 20px rgb(20, 20, 20));
+
+  p {
+    margin: 10px 0;
+    color: #000;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: start;
+  }
+}
+
+.form {
+  display: flex;
+  width: 100%;
+  max-width: 425px;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  gap: 10px;
+  align-items: flex-start;
+  flex-direction: column;
+
+  input {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: 0.5px solid grey;
+    border-radius: 10px;
+    background-color: rgba(177, 176, 175, 0.13);
+
+    &:hover {
+      background: rgb(226, 225, 225);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+button {
+  width: 100%;
+  max-width: 500px;
+  padding: 7px;
+  margin-top: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(0, 47, 255);
+
+  &:hover {
+    box-shadow: 0 0 6px 0.5px rgba(0, 47, 255, 0.637);
+    transition: all 0.3s;
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+.download-btn {
+  background-color: rgb(15, 136, 63);
+
+  &:hover {
+    box-shadow: 0 0 6px 0.5px rgba(15, 136, 63, 0.5);
+  }
+}
+
+#output {
+  width: 200px;
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: max-height 1s;
+
+  img {
+    width: 100%;
+    padding: 10px;
+  }
+
+  &.show-img {
+    max-height: 500px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+    transition: all 0.3s;
+  }
+}
+
+.error {
+  animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
