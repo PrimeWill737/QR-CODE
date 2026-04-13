@@ -8,6 +8,7 @@ type QrFormData = {
   phone: string;
   email: string;
   location: string;
+  
 };
 
 const initialFormData: QrFormData = {
